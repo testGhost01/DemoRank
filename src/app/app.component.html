@@ -1,20 +1,37 @@
-<div class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a  routerLink="/home" routerLinkActive="active"  class="navbar-brand">DemoRank</a>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a routerLink = "/login" routerLinkActive ="active">Login</a></li>
-                <li><a routerLink = "/signUp" routerLinkActive ="active">Sign Up</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="jumbotron">
-        <h1>
+<md-toolbar color="primary">
+    <span>DemoRank</span>
+    <span class="spacer"></span>
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+    <md-menu #menu="mdMenu">
+      <button md-menu-item>
+        <md-icon>fingerprint</md-icon>
+        <span>Login</span>
+      </button>
+      <button md-menu-item disabled>
+        <md-icon>announcement</md-icon>
+        <span>Issues</span>
+      </button>
+      <button md-menu-item>
+        <md-icon>notifications_off</md-icon>
+        <span>Disable alerts</span>
+      </button>
+    </md-menu>
+</md-toolbar>
+
+
+<md-tab-group color="primary" (selectChange)="onLinkClick($event)">
+  <md-tab  label="Home">
+  </md-tab>
+  <md-tab   label="Sign In">
+
+  </md-tab>
+  <md-tab  label="Sign Up">
+  
+  </md-tab>
+
+</md-tab-group>
+<md-card class="example-card">
             <router-outlet></router-outlet>
-        </h1>
-    </div>
-</div>
+        </md-card>
