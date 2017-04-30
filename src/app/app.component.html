@@ -1,3 +1,20 @@
-<h1>
-  {{title}}
-</h1>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a  routerLink="/home" routerLinkActive="active"  class="navbar-brand">DemoRank</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a routerLink = "/login" routerLinkActive ="active">Login</a></li>
+                <li><a routerLink = "/signUp" routerLinkActive ="active">Sign Up</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="jumbotron">
+        <h1>
+            <router-outlet></router-outlet>
+        </h1>
+    </div>
+</div>
