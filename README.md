@@ -1,6 +1,6 @@
 # DemoRank
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+DemoRank is a technology company that focuses on competitive programming challenges for both consumers and businesses, where developers compete by trying to program according to provided specifications
 
 ## Development server
 
